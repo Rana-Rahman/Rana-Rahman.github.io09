@@ -1,0 +1,62 @@
+body {
+    background-color: #D1D1D1;
+}
+.attendence {
+    border-color: transparent;
+    border-collapse: collapse;
+    width: 100%;
+    height: 600px;
+    margin-top: 150px;
+    cursor: pointer;
+    background: rgb(64,37,218);
+    background: linear-gradient(104deg, rgba(64,37,218,1) 0%, rgba(120,27,225,1) 47%, rgba(196,18,226,1) 99%);  
+}
+.attendence thead th {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #dbdbdb;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 15px;
+    
+}
+.attendence thead {
+    background: rgb(154,66,240);
+    background: linear-gradient(104deg, rgba(154,66,240,1) 47%, rgba(215,122,232,1) 99%);
+}
+.attendence tbody td {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #dbdbdb;
+    font-weight: 100;
+    text-align: center;
+}
+.attendence-highlight {
+    overflow: hidden;
+    z-index: 1;
+}
+.attendence-highlight tbody td,
+.attendence-highlight thead th {
+    position: relative;
+}
+
+.attendence-highlight tbody td:hover::before {
+    background: rgb(230,190,246);
+    background: linear-gradient(to right, 104deg, rgba(230,190,246,1) 0%, rgba(230,190,246,1) 100%);
+    content:'00a0';
+    height: 100%;
+    left: -5000px;
+    position: absolute;
+    top: 0;
+    width: 10000px;
+    z-index: -1;
+}
+.attendence-highlight tbody td:hover::after {
+    background: linear-gradient(to bottom, #FFC0CB, #FF1493);
+    content:'00a0';
+    content:'00a0';
+    height: 10000px;
+    left: 0;
+    position: absolute;
+    top: -5000px;
+    width: 100%;
+    z-index: -1;
+}
